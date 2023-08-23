@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login</div>
+      <div class="title signup">Signup</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Login</label>
+        <label for="signup" class="slide signup">Signup</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="success.html" class="login" method="get" onsubmit="return ValidateLogin()">
+          <div class="field">
+            <input type="email" placeholder="Email Address" name="mail" id="logmail">
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" name="pass" id="logpass">
+          </div><br>
+          <center><input type="checkbox" onclick="Toggle()">
+            <strong>Show Password</strong>
+          </center>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Don't have an account ?<br> <a type=button href="#signup" id="signUpButton">Signup
+              now</a></div>
+        </form>
+        <form class="signup" action="success.html" onsubmit="return ValidateSignin()" name="signup">
+          <div class="field">
+            <input type="email" placeholder="Email Address" id="signmail" name="signmail">
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" id="signpass" name="signpass">
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Confirm password" id="confpass" name="confpass">
+          </div><br>
+          <center><input type="checkbox" onclick="Toggle1()">
+            <strong>Show Password</strong>
+          </center>
+          <div class="field">
+            <input type="date" placeholder="" id="dob" name="dob" required>
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Enter Address" required>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+</body>
+
+</html>
